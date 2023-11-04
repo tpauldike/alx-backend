@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+                viewport-fit=cover">
+    <title>{{ gettext('home_title') }}</title>
+  </head>
+  <body>
+	<header>
+	  <h1>{{ gettext('home_header') }}</h1>
+      {% if g.user %}
+      <p>{{ gettext('logged_in_as', username=g.user.name) }}</p>
+      {% else %}
+      <p>{{ _('not_logged_in') }}</p>
+      {% endif %}
+	</header>
+  </body>
+</html>
